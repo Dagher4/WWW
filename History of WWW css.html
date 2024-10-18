@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>History of the World Wide Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href="https://dagher4.github.io/WWW/">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 0;
+            width: 250px;
+            top: 52px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        body {
+            font-size: 125%;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Progects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Your CV</a>
+                <a href="CV">Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Topics</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#1">Introduction</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#2">Origins of the World Wide Web</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#3">Web Evolution and Browser History</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#4">Current Trends on the Web</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#5">Future Possibilities</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="#6">Conclusion</a>
+
+    </nav>
+
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <h1 id="1" class="center">History of the World Wide Web</h1>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+
+
+                <h2 class="w3-text-teal"> Introduction</h2>
+                <p> The World Wide Web (WWW), commonly referred to as the web, has transformed how information is shared
+                    and accessed globally. It is a system of interlinked hypertext documents and multimedia, accessed
+                    through the Internet. Since its inception in the late 20th century, the web has evolved
+                    significantly, influencing all aspects of modern life.</p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-64 w3-center"><img
+                        src="https://kinex.co.uk/wp-content/uploads/2021/10/History-of-the-Internet-Blog.jpg" alt="WWW"
+                        style="width: 295px;height: 255px;"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+
+                <h2 id="2" class="w3-text-teal"> 1. Origins of the World Wide Web</h2>
+                <p>The World Wide Web (WWW) was created by British scientist Tim Berners-Lee in 1989 while working
+                    at CERN (the European Organization for Nuclear Research). Berners-Lee envisioned a system that
+                    would allow scientists to share data more efficiently across different computers. He developed
+                    three key technologies:
+                <ol>
+                    <li>HTML (HyperText Markup Language): A formatting language for web pages.</li>
+                    <li>HTTP (HyperText Transfer Protocol): A protocol for data exchange between computers.</li>
+                    <li>URL (Uniform Resource Locator): A unique address for each resource on the web.</li>
+                </ol>
+                In 1991, the first website was launched, and by 1993, the web began to gain attention.
+                The release of the Mosaic browser, developed by Marc Andreessen and Eric Bina, played a pivotal
+                role in popularizing the Web by providing a user-friendly interface to access and navigate
+                websites.
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"></p>
+                <p class="w3-padding-large w3-padding-32 w3-center"><img class="border"
+                        src="https://www2014.kr/pics/history_www-1.jpg" alt="WWW" style="width: 290px;height: 214px;">
+                </p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="3" class="w3-text-teal">2. Web Evolution and Browser History</h2>
+                <h3 class="w3-text-teal">Early Browsers:</h3>
+                <p>
+                <ul>
+                    <li>WorldWideWeb (1990): Created by Berners-Lee, it was the first web browser but not
+                        widely adopted.</li>
+                    <li>Mosaic (1993): The first popular graphical web browser, developed by Marc Andreessen
+                        and Eric Bina, played a significant role in the growth of the web.</li>
+                    <li>Netscape Navigator (1994): Built on Mosaic's success, it quickly became the dominant
+                        browser in the mid-1990s.</li>
+                </ul>
+
+                </p>
+                <h3 class="w3-text-teal">Browser Wars:</h3>
+                <p>In the mid-1990s, a major rivalry developed between Netscape and Microsoft, which launched Internet
+                    Explorer in
+                    1995. This period, known as the Browser Wars, led to rapid innovation but also controversies related
+                    to
+                    monopolistic practices. By the early 2000s, Internet Explorer had gained dominance, peaking in usage
+                    but
+                    suffering from security issues and stagnation in innovation.</p>
+                <h3 class="w3-text-teal">Modern Browsers:</h3>
+                <p>
+                <ul>
+                    <li>Google Chrome (2008): Introduced by Google, Chrome revolutionized the browser landscape with its
+                        speed,
+                        security, and minimalistic design. It currently holds the largest market share.</li>
+                    <li>Mozilla Firefox (2002): An open-source browser that became a popular alternative to Internet
+                        Explorer,
+                        emphasizing user
+                        control and privacy.</li>
+                    <li>Safari (2003): Apple's proprietary browser, optimized for macOS and iOS.</li>
+                    <li>Microsoft Edge (2015): Microsoft's successor to Internet Explorer, rebuilt with a Chromium
+                        engine for better
+                        performance.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"></p>
+                <embed type="video/webm" src="https://www.youtube.com/embed/sSqZ_hJu9zA" width="320" height="214">
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="4" class="w3-text-teal">3. Current Trends on the Web</h2>
+                <p>
+                <ul>
+                    <li>Mobile-first Design: With the rise of smartphones, websites are now developed with a
+                        mobile-first
+                        approach, prioritizing mobile usability.</li>
+                    <li>Web 2.0 and Beyond: Web 2.0 brought interactivity, social media platforms, and user-generated
+                        content.
+                        This led to the growth of platforms like Facebook, Twitter, and YouTube. The modern web is
+                        increasingly
+                        interactive, enabling collaborative and dynamic experiences.</li>
+                    <li>Privacy and Security: As more personal information is shared online, privacy concerns have
+                        emerged.
+                        Regulations like GDPR in Europe reflect the growing emphasis on user data protection.</li>
+                    <li>AI Integration: Artificial Intelligence is being integrated into web services, from chatbots to
+                        personalized content recommendations.</li>
+                    <li>Progressive Web Apps (PWAs): Web applications that offer an app-like experience within a
+                        browser, blurring
+                        the line between websites and mobile apps.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+                <p class=" w3-padding-large w3-padding-64 w3-center"><img
+                        src="https://d3r5yd0374231.cloudfront.net/images-tek/uploads/2024/05/Feature-Image-Web-Development-Trends-in-2024.png"
+                        alt="WWW" style="width: 290px;height: 194px;"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="5" class="w3-text-teal">4. Future Possibilities</h2>
+                <p>
+                    The future of the web will likely involve significant shifts in technology and user experience. Key
+                    possibilities include:
+                <ul>
+                    <li>Web 3.0 and Decentralization: Web 3.0 envisions a decentralized web built on blockchain
+                        technology. This
+                        could reduce reliance on centralized servers and large tech companies, giving users more control
+                        over their
+                        data.</li>
+                    <li>Virtual Reality (VR) and Augmented Reality (AR): These technologies could transform the way we
+                        experience
+                        the web, providing immersive 3D environments for interaction.</li>
+                    <li>Semantic Web: The Semantic Web is a concept where machines can interpret and understand web
+                        data, enabling
+                        more intelligent search results and automated tasks.</li>
+                    <li>Quantum Computing: With the development of quantum computers, the processing capabilities of web
+                        services
+                        could be vastly enhanced, enabling new types of applications and experiences.</li>
+                    <li>Sustainability and Green Web: There is increasing emphasis on making web technologies more
+                        energy-efficient and environmentally friendly, especially in response to concerns over climate
+                        change.</li>
+                </ul>
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+                <p class=" w3-padding-large w3-padding-64 w3-center"><img
+                        src="https://miro.medium.com/v2/resize:fit:1400/0*_RUqTfdiylOHlhzs.jpg" alt="WWW"
+                        style="width: 290px;height: 194px;"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="6" class="w3-text-teal">Conclusion</h2>
+                <p>The World Wide Web has evolved from a simple information-sharing platform into a complex ecosystem
+                    that shapes
+                    modern society. With ongoing developments in AI, blockchain, and immersive technologies, the web
+                    will likely
+                    continue to adapt, presenting new opportunities and challenges in the coming years. </p>
+
+                <h2 class="w3-text-teal">References:</h2>
+                <a class="bold" href="https://www.w3.org/about/history/">W3C</a><br>
+                <a class="bold"
+                    href="https://home.cern/science/computing/birth-web/short-history-web#:~:text=Tim%20Berners%2DLee%2C%20a%20British,and%20institutes%20around%20the%20world.">
+                    CERN</a><br>
+                <a class="bold" href="https://kinex.co.uk/history-of-the-internet/">Kinex</a><br>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+</body>
+
+</html>
