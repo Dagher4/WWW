@@ -68,13 +68,22 @@
         E-mail:<br>
         <input type="email" name="mail" size="25" required><br>
         Comment:<br>
-        <textarea rows="1" style="resize: vertical;height: 160px; width: 900px; max-height: 200px;" required></textarea>
+        <input type="hidden" name="msg" id="msg">
+        <textarea id="ide" rows="1" onkeyup="val(this);" style="resize: vertical;height: 160px; width: 900px; max-height: 200px;" required></textarea>
 <br><br>
         <input type="submit" value="Send">
         <input type="reset" value="Reset">
     </form>
 
     <script>
+        function val(e) {
+     var someText = e.value;
+     console.log(someText )
+
+     if (someText == "text") {  
+          document.getElementById("msg").innerHTML="new text"; 
+     }
+}
         function openNav() {
             document.getElementById("myNav").style.width = "100%";
         }
