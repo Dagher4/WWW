@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>PHP static variable</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href="https://dagher4.github.io/WWW/">
+    <style>
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 0;
+            width: 250px;
+            top: 52px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        body {
+            font-size: 125%;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            height: 400px;
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        code {
+            font-size: 0.8em;
+            line-height: 1.5;
+            display: block;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        .number {
+            color: #b5cea8;
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        .vtype {
+            color: rgb(255, 200, 0);
+        }
+
+        .function-call {
+            color: #df2525;
+        }
+
+        .highlight {
+            background-color: #525252;
+            color: #ffffff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="Wordle">Wordle</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Hardine css">Events </a>
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+                <a href="CSS">History of CSS </a>
+                <a href="PHP static variable">PHP static variable </a>
+                <a href="Spaceship operator">Spaceship operator </a>
+                <a href="Input type button VS Button">Input type button VS Button </a>
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Progects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Form">Your CV</a>
+                <a href="Mail">Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Topics</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="PHP static variable#1">Introduction</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="PHP static variable#2">Function Static Variables</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="PHP static variable#3">Class Static Properties and Methods</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="PHP static variable#4">Benefits of Static Variables</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="PHP static variable#5">Static Variables vs. Global Variables</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="PHP static variable#6">Use Cases for Static Variables</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="PHP static variable#7">Limitations of Static Variables</a>
+
+    </nav>
+
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <h1 id="1" class="center">PHP static variable</h1>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+
+
+                <h2 id="1" class="w3-text-teal"> Introduction</h2>
+                <p> In PHP, a static variable is a special type of variable within a function or a class that retains
+                    its value between function calls. It is useful when you need to keep track of information across
+                    multiple executions of the same function without using global variables. Here's a deeper look into
+                    how PHP static variables work:</p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/800px-PHP-logo.svg.png"
+                        alt="WWW" style="width: 295px;height: 180px;"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+
+                <h2 id="2" class="w3-text-teal"> 1. Function Static Variables</h2>
+                When you declare a variable as <span class="highlight">static</span> inside a function, PHP will
+                remember its value each time the function is called.
+
+                <div class="code-block" style="height: 60%;">
+                    <pre><code><span class="keyword">function</span><span class="function-call"> counter</span> (){
+<span class="vtype"> static</span> $count = <span class="number">0</span>;
+$count++;
+<span class="keyword">echo</span> $count;
+}
+<span class="function-call">counter</span>();<span class="comment">// Outputs 1</span>
+<span class="function-call">counter</span>();<span class="comment">// Outputs 2</span>
+<span class="function-call">counter</span>();<span class="comment">// Outputs 3</span>
+                    </code></pre>
+                </div>
+                In this example, the <span class="highlight">$count</span> variable retains its value each time
+                <span class="highlight">counter()</span> is called. Without <span class="highlight">static</span>,
+                the variable would reset on each function call.
+                <p class="bold">Key points:</p>
+                <ul>
+                    <li>The static variable is initialized only once.</li>
+                    <li>It retains its value between function calls.</li>
+                    <li>It is only accessible within the function it is defined in.</li>
+                </ul>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="3" class="w3-text-teal">2. Class Static Properties and Methods</h2>
+                In classes, static properties and methods are associated with the class itself, rather than instances of
+                the class. They are shared across all instances of the class and can be accessed without creating an
+                instance.
+                <div class="code-block" style="height: 70%;">
+                    <pre><code><span class="keyword">class</span> <span class="vtype">MyClass</span> {
+<span class="keyword">public </span><span class="vtype">static</span> $count = <span class="number">0</span>;
+           
+<span class="keyword">public <span class="vtype">static</span> function</span> <span class="function-call">increment()</span> {
+<span class="vtype">self</span>::$count++;
+}
+}
+            
+<span class="function-call">MyClass::increment()</span>;
+<span class="keyword">echo</span> <span class="function-call">MyClass::</span>$count; <span class="comment">// Outputs 1</span>
+<span class="function-call">MyClass::increment()</span>;
+<span class="keyword">echo</span> <span class="function-call">MyClass::</span>$count; <span class="comment">// Outputs 2</span>
+                    </code></pre>
+                </div>
+                <p class="bold">Key points:</p>
+                <ul>
+                    <li>Static properties and methods belong to the class itself, not instances.</li>
+                    <li>Use <span class="highlight">self::</span> to refer to static properties/methods within the
+                        class.</li>
+                    <li>Access them outside the class with <span class="highlight">ClassName::property</span> or <span
+                            class="highlight">ClassName::method()</span>.</li>
+                </ul>
+            </div>
+            <div class="w3-third w3-container">
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="4" class="w3-text-teal">3. Benefits of Static Variables</h2>
+                <p>Static variables in PHP offer several advantages:
+                <ul>
+                    <li>
+                        <span class="bold">Memory efficiency:</span>The variable is only initialized once.
+                    </li>
+                    <li>
+                        <span class="bold">Encapsulation:</span>Static variables in functions are private to the
+                        function scope.
+                    </li>
+                    <li>
+                        <span class="bold">Persistence:</span>Values are retained across function calls without using
+                        global variables.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+                <p class=" w3-padding-large w3-padding-64 w3-center"><img
+                        src="https://www.webskittersacademy.in/wp-content/uploads/2021/11/feature-image-825x550.png" style="width: 290px;height: 194px;">
+                </p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="5" class="w3-text-teal">4. Static Variables vs. Global Variables</h2>
+                <ul>
+                    <li>
+                        Static variables are confined to the function they are declared in, while global variables can
+                        be accessed throughout the code.
+                    </li>
+                    <li>
+                        Static variables help avoid conflicts that can arise from using global variables, as their scope
+                        is limited.
+                    </li>
+                </ul>
+
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-64 w3-center"><img
+                        src="https://www.classgist.com/uploads/de2eaba9-372c-420f-8ed6-b1ff4b02a519.png"
+                        style="width: 290px;height: 294px;"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="6" class="w3-text-teal">5. Use Cases for Static Variables</h2>
+                <ul>
+                    <li>
+                        <span class="bold">Counting function calls:</span>As shown in the <span
+                            class="highlight">counter()</span> example.
+                    </li>
+                    <li>
+                        <span class="bold">Memoization:</span>Caching results within a function for efficiency.
+                    </li>
+                    <li>
+                        <span class="bold">Singleton patterns:</span>Ensuring only one instance of a class exists by
+                        using a static property to store the instance.
+                    </li>
+                </ul>
+
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+                <p class=" w3-padding-large w3-padding-64 w3-center"><img
+                        src="https://www.scientecheasy.com/wp-content/uploads/2018/09/java-static-variable.png" alt="WWW"
+                        style="width: 290px;height: 194px;"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="7" class="w3-text-teal">6. Limitations of Static Variables</h2>
+                <ul>
+                    <li>
+                        Static variables are not suitable for recursive functions, as they retain state across function
+                        calls.
+                    </li>
+                    <li>
+                        They are shared across requests, so their usage in web applications requires careful handling to
+                        avoid unintended data persistence in contexts like multi-threaded or asynchronous applications.
+                    </li>
+                </ul>
+
+                <h2 class="w3-text-teal">References:</h2>
+                <a class="bold" href="https://www.w3schools.com/php/default.asp">W3Schools</a><br>
+                <a class="bold" href="https://phptherightway.com/">
+                    PHP: The Right Way</a><br>
+                <br>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+</body>
+
+</html>
