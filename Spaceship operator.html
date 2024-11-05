@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Spaceship operator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href="https://dagher4.github.io/WWW/">
+    <style>
+        .bold-numbers {
+            list-style-type: none;
+            /* Remove default list style */
+            counter-reset: section;
+        }
+
+        .bold-numbers li::before {
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 0;
+            width: 250px;
+            top: 52px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        body {
+            font-size: 125%;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            height: 400px;
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        code {
+            font-size: 0.8em;
+            line-height: 1.5;
+            display: block;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        .number {
+            color: #b5cea8;
+        }
+
+        .variab {
+            color: rgb(202, 16, 137);
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        .vtype {
+            color: rgb(255, 200, 0);
+        }
+
+        .function-call {
+            color: #df2525;
+        }
+
+        .highlight {
+            background-color: #525252;
+            color: #ffffff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="Wordle">Wordle</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Events">Events </a>
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+                <a href="CSS">History of CSS </a>
+                <a href="PHP static variable">PHP static variable </a>
+                <a href="Spaceship operator">Spaceship operator </a>
+                <a href="Input type button VS Button">Input type button VS Button </a>
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Progects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Form">Your CV</a>
+                <a href="Mail">Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Topics</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Spaceship operator#1">Introduction</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Spaceship operator#2">Languages That Support the
+            Spaceship Operator</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Spaceship operator#3">Advantages of Using the Spaceship
+            Operator</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Spaceship operator#4">Limitations</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Spaceship operator#5">Potential Use Cases</a>
+
+
+    </nav>
+
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <h1 id="1" class="center">Spaceship operator</h1>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+
+
+                <h2 id="1" class="w3-text-teal"> Introduction</h2>
+                <p> The "spaceship operator" <span class="highlight"> (<=>)</span> is a shorthand notation for a
+                    three-way comparison operation, which
+                    helps to simplify code in programming languages that support it. It evaluates the relationship
+                    between two expressions and returns one of three possible values:
+                <ul>
+                    <li>A negative integer if the first operand is less than the second.</li>
+                    <li>Zero if the first operand is equal to the second.</li>
+                    <li>A positive integer if the first operand is greater than the second.</li>
+                </ul>
+                This operator is mainly used in sorting and comparison functions, where determining order is essential.
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"><img
+                        src="https://pbs.twimg.com/media/EegDgF-XoAEa4Lk.jpg"
+                        alt="WWW" style="width: 295px;height: 180px;"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+
+                <h2 id="2" class="w3-text-teal"> 1. Languages That Support the Spaceship Operator</h2>
+                <ol class="bold-numbers">
+                    <li>
+                        <span class="bold">C++ (since C++20):</span><br> Introduced the spaceship operator as a
+                        general-purpose tool
+                        for writing concise and uniform comparison code. In C++, you can write a <span
+                            class="highlight">std::strong_ordering</span> , <span
+                            class="highlight">std::weak_ordering</span> , or <span
+                            class="highlight">std::partial_ordering</span> to specify different comparison
+                        levels.<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code>#<span class="keyword">include</span><span class="comment"> <<span>compare</span>></span>
+
+<span class="keyword"> struct</span> <span class="function-call">Point</span> {
+    <span class="variab">int</span> x,y;
+    <span class="keyword">auto </span><span class="vtype">operator</span><=>(<span class="variab">const</span>Point&) <span class="variab">const</span> = <span class="keyword">default</span>;
+};
+                    </code></pre>
+                        </div>
+                    </li><br>
+                    <li><span class="bold">Ruby (since Ruby 2.3):</span><br>In Ruby, the spaceship operator has been
+                        around longer and is frequently used in sorting. The operator can return <span
+                            class="highlight">-1</span>, <span class="highlight">0</span>, or <span
+                            class="highlight">1</span>, making it
+                        useful in custom sorting blocks.<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code>[<span class="variab">5</span>, <span class="variab">3</span>, <span class="variab">8</span>, <span class="variab">1</span>].sort { |a,b| a <=> b }
+                    </code></pre>
+                        </div>
+                    </li><br>
+                    <li>
+                        <span class="bold">PHP (since PHP 7):</span><br>PHP's spaceship operator is also similar,
+                        allowing for three-way comparisons within expressions.<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code><span class="variab">$result</span> = <span class="variab">$a</span> <=> <span class="variab">$b</span>;
+                    </code></pre>
+                        </div>
+                    </li><br>
+                    <li>
+                        <span class="bold">Perl (versions after 5.9):</span><br>The spaceship operator exists in Perl as
+                        well, where it’s used both for numeric <span class="highlight">
+                            <=>
+                        </span> and string <span class="highlight">cmp</span> comparisons.<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code><span class="keyword">my</span> @sorted = <span class="keyword">sort</span> { $a <=> $b } @numbers;
+                    </code></pre>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="3" class="w3-text-teal">2. Advantages of Using the Spaceship Operator</h2>
+                <ol class="bold-numbers">
+                    <li>
+                        <span class="bold">Conciseness:</span><br>It reduces the amount of code needed for conditional
+                        comparisons.
+                    </li>
+                    <li>
+                        <span class="bold">Uniformity:</span><br>By defining all comparisons at once, it avoids the need
+                        to overload multiple operators (<,>, ==, etc.).
+                    </li>
+                    <li>
+                        <span class="bold">Enhanced Readability:</span><br>It provides a clear, standardized way to
+                        express ordering logic, making the code easier to understand and maintain.
+                    </li>
+                </ol>
+            </div>
+            <div class="w3-third w3-container">
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="4" class="w3-text-teal">3. Limitations</h2>
+                While the spaceship operator is convenient, it's mostly limited to languages that support it natively.
+                In other languages, you'll need to implement custom comparison methods.
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+                </p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="5" class="w3-text-teal">4. Potential Use Cases</h2>
+                <ol class="bold-numbers">
+                    <li>
+                        <span class="bold">Sorting Algorithms:</span><br>Useful in custom sorting logic where you need
+                        to compare multiple fields.
+                    </li>
+                    <li>
+                        <span class="bold">Database Comparisons:</span><br>Spaceship operators can be used when
+                        filtering or ordering data.
+                    </li>
+                    <li>
+                        <span class="bold">Mathematical Operations:</span><br>They help streamline comparisons in
+                        complex expressions, especially in data science and mathematical libraries.
+                    </li>
+                </ol>
+                The spaceship operator can be a significant time-saver and contribute to more maintainable and readable
+                code where available.<br><br>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+</body>
+
+</html>
