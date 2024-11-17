@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CV</title>
+    <link rel="stylesheet" href="style.css">
+    <base href="https://dagher4.github.io/WWW/">
+
+
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="Wordle">Wordle</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Events">Events </a>
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+                <a href="CSS">History of CSS </a>
+                <a href="PHP static variable">PHP static variable </a>
+                <a href="Spaceship operator">Spaceship operator </a>
+                <a href="Input type button VS Button">Input type button VS Button </a>
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Progects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Form">Your CV</a>
+                <a href="Mail">Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+    <h2>Fill out the form</h2>
+    <form id="userForm">
+        <label for="imagePreview">Upload Image:</label>
+        <input type="file" id="imageInput" name="image" accept="image/*"><br><br>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required tabindex="1"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" required tabindex="2"><br><br>
+        <label for="position">Position:</label>
+        <input type="text" id="position" name="position" required tabindex="3"><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required tabindex="4"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required tabindex="5"><br><br>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"
+            pattern="^((01|04|05|06|07|09)\d{6}|(03|70|71|76|78|79|81|83|88)\d{6})$"
+            placeholder="Valid Lebanese phone nb" required tabindex="6"><br><br>
+        <div id="skillContainer">
+            <h3>Skill(s)</h3>
+            <label for="skill1">Skill:</label>
+            <input type="text" id="skill1" name="skill[]" required tabindex="7"><br><br>
+        </div>
+        <button type="button" id="addskillButton">+ Add Skill</button><br><br>
+
+        <div id="langContainer">
+            <h3>Language(s)</h3>
+            <label for="lang1">Language:</label>
+            <input type="text" id="lang1" name="lang[]" required tabindex="8"><br><br>
+        </div>
+        <button type="button" id="addlangButton">+ Add Language</button><br><br>
+
+        <div id="experienceContainer">
+            <div id="inputSet">
+                <h3>Experience(s)</h3>
+                <label for="experience1">Experience:</label>
+                <input type="text" id="experience1" name="experience[]" required tabindex="9">
+                <label for="exfrom1">From:</label>
+                <input type="date" id="exfrom1" name="exfrom[]" required tabindex="10">
+                <label for="exto1">To:</label>
+                <input type="date" id="exto1" name="exto[]" required tabindex="11">
+                <label for="exdesc1">Description:</label>
+                <input type="text" id="exdesc1" name="exdesc[]" placeholder="optional" tabindex="12"><br><br>
+            </div>
+        </div>
+        <button type="button" id="addExperienceButton">+ Add Experience</button><br><br>
+
+        <div id="educationContainer">
+            <div id="inputSet">
+                <h3>Education(s)</h3>
+                <label for="education1">Education:</label>
+                <input type="text" id="education1" name="education[]" required tabindex="13">
+                <label for="edfrom1">From:</label>
+                <input type="date" id="edfrom1" name="edfrom[]" required tabindex="14">
+                <label for="edto1">To:</label>
+                <input type="date" id="edto1" name="edto[]" required tabindex="15">
+                <label for="eddesc1">Description:</label>
+                <input type="text" id="eddesc1" name="eddesc[]" placeholder="optional" tabindex="16"><br><br>
+            </div>
+        </div>
+        <button type="button" id="addEducationButton">+ Add Education</button><br><br>
+
+        <button type="submit" onclick="handleSubmit(event)">Submit</button><br><br>
+    </form>
+
+    <script>    function handleSubmit(event) {
+        // Prevent form from actually submitting
+      
+        // Get form values
+        const fname = document.getElementById('fname').value;
+        const lname = document.getElementById('lname').value;
+        const position = document.getElementById('position').value;
+        const address = document.getElementById('address').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+      
+        // Get the file input (image) and read it as a data URL
+        const imageInput = document.getElementById('imageInput');
+        const file = imageInput.files[0];
+        let imageUrl = '';
+
+        const today = new Date().toISOString().split('T')[0];
+      const mind = new Date();
+      mind.setFullYear(mind.getFullYear() - 100); 
+      const minDate = mind.toISOString().split('T')[0];
+
+
+      const dateInputs = document.querySelectorAll('input[type="date"]');
+      
+      // Loop through each date input and set the 'max' attribute
+      dateInputs.forEach(dateInput => {
+        dateInput.setAttribute('max', today);
+        dateInput.setAttribute('min', minDate);
+      });
+
+        const form = document.getElementById('userForm');
+      if (!form.checkValidity()) {
+        // If the form is invalid, let the browser display validation messages
+        return;
+      }
+      event.preventDefault();
+        
+        // If a file is selected, convert it to base64
+        if (file) {
+          const reader = new FileReader();
+          reader.onloadend = function() {
+            imageUrl = reader.result; // base64 image string
+            // Proceed to open new URL after reading the image
+            openNewPageWithData(fname, lname, position, address, email, phone, imageUrl);
+          };
+          reader.readAsDataURL(file);
+        } else {
+          // If no image is selected, continue without it
+          openNewPageWithData(fname, lname, position, address, email, phone, '');
+        }
+      }
+      
+      function openNewPageWithData(fname, lname, position, address, email, phone, imageUrl) {
+        // Get all other form data
+        const skills = [];
+        for (let i = 1; i <= 10; i++) {
+          const element = document.getElementById(`skill${i}`);
+          if (element) skills.push(element.value);
+        }
+      
+        const lang = [];
+        for (let i = 1; i <= 10; i++) {
+          const element = document.getElementById(`lang${i}`);
+          if (element) lang.push(element.value);
+        }
+      
+        const experience = [];
+        const exfrom = [];
+        const exto = [];
+        const exdesc = [];
+        for (let i = 1; i <= 10; i++) {
+          const expElem = document.getElementById(`experience${i}`);
+          if (expElem) {
+            experience.push(expElem.value);
+            exfrom.push(document.getElementById(`exfrom${i}`).value);
+            exto.push(document.getElementById(`exto${i}`).value);
+            exdesc.push(document.getElementById(`exdesc${i}`).value);
+          }
+        }
+      
+        const education = [];
+        const edfrom = [];
+        const edto = [];
+        const eddesc = [];
+        for (let i = 1; i <= 10; i++) {
+          const eduElem = document.getElementById(`education${i}`);
+          if (eduElem) {
+            education.push(eduElem.value);
+            edfrom.push(document.getElementById(`edfrom${i}`).value);
+            edto.push(document.getElementById(`edto${i}`).value);
+            eddesc.push(document.getElementById(`eddesc${i}`).value);
+          }
+        }
+        
+        
+
+        const skill = skills.join("<br> ");
+        const langs = lang.join("<br> ");
+        
+        // Build the experience and education HTML
+        let exp = '';
+        for (let i = 0; i < experience.length; i++) {
+            exp += `
+           <div class="w3-container">
+            <h5 class="w3-opacity"><b>${experience[i]}</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>${exfrom[i]} <span style="font-weight: bold;">-</span> ${exto[i]}</h6>
+            <p>${exdesc[i]}</p>
+            <hr>
+          </div>
+        `;
+        }
+        let edu = '';
+        for (let i = 0; i < education.length; i++) {
+            edu += `
+           <div class="w3-container">
+            <h5 class="w3-opacity"><b>${education[i]}</b></h5>
+            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>${edfrom[i]} <span style="font-weight: bold;">-</span> ${edto[i]}</h6>
+            <p>${eddesc[i]}</p>
+            <hr>
+          </div>
+        `;
+        }
+      
+        // Build the new URL with all the form data, including the image in base64
+        const newUrl = `new_page?fname=${encodeURIComponent(fname)}&lname=${encodeURIComponent(lname)}&position=${encodeURIComponent(position)}&address=${encodeURIComponent(address)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&image=${encodeURIComponent(imageUrl)}&skills=${encodeURIComponent(skill)}&lang=${encodeURIComponent(langs)}&exp=${encodeURIComponent(exp)}&ed=${encodeURIComponent(edu)}`;
+      
+        // Open the new page with the data
+        window.open(newUrl, '_blank');
+      }
+      
+    </script>
+    <script>
+        let skillCount = 1;
+        let langCount = 1;
+
+        const skillContainer = document.getElementById('skillContainer');
+        const langContainer = document.getElementById('langContainer');
+        const addSkillButton = document.getElementById('addskillButton');
+        const addLangButton = document.getElementById('addlangButton');
+
+
+        addSkillButton.addEventListener('click', function () {
+            skillCount++;
+
+            const skillLabel = document.createElement('label');
+            skillLabel.setAttribute('for', `skill${skillCount}`);
+            skillLabel.textContent = `Skill ${skillCount}:`;
+
+            const skillInput = document.createElement('input');
+            skillInput.setAttribute('type', 'text');
+            skillInput.setAttribute('id', `skill${skillCount}`);
+            skillInput.setAttribute('skill', 'skill[]');
+
+
+            skillContainer.appendChild(skillLabel);
+            skillContainer.appendChild(skillInput);
+            skillContainer.appendChild(document.createElement('br'));
+            skillContainer.appendChild(document.createElement('br'));
+        });
+
+
+        addLangButton.addEventListener('click', function () {
+            langCount++;
+
+
+            const langLabel = document.createElement('label');
+            langLabel.setAttribute('for', `lang${langCount}`);
+            langLabel.textContent = `Language ${langCount}:`;
+
+            const langInput = document.createElement('input');
+            langInput.setAttribute('type', 'text');
+            langInput.setAttribute('id', `lang${langCount}`);
+            langInput.setAttribute('name', 'lang[]');
+
+            langContainer.appendChild(langLabel);
+            langContainer.appendChild(langInput);
+            langContainer.appendChild(document.createElement('br'));
+            langContainer.appendChild(document.createElement('br'));
+        });
+        const experienceContainer = document.getElementById('experienceContainer');
+        const addExperienceButton = document.getElementById('addExperienceButton');
+        let experienceCount = 1;
+
+        addExperienceButton.addEventListener('click', function () {
+            experienceCount++;
+            const newSet = document.createElement('div');
+            newSet.classList.add('inputSet');
+
+            // Create the new "Experience" label and input
+            const experienceLabel = document.createElement('label');
+            experienceLabel.setAttribute('for', `experience${experienceCount}`);
+            experienceLabel.textContent = `Experience ${experienceCount}:`;
+
+            const experienceInput = document.createElement('input');
+            experienceInput.setAttribute('type', 'text');
+            experienceInput.setAttribute('id', `experience${experienceCount}`);
+            experienceInput.setAttribute('name', 'experience[]');
+
+            // Create the new "exFrom" label and input
+            const exfromLabel = document.createElement('label');
+            exfromLabel.setAttribute('for', `exfrom${experienceCount}`);
+            exfromLabel.textContent = `From:`;
+
+            const exfromInput = document.createElement('input');
+            exfromInput.setAttribute('type', 'date');
+            exfromInput.setAttribute('id', `exfrom${experienceCount}`);
+            exfromInput.setAttribute('name', 'exfrom[]');
+
+            // Create the new "exTo" label and input
+            const extoLabel = document.createElement('label');
+            extoLabel.setAttribute('for', `exto${experienceCount}`);
+            extoLabel.textContent = `To:`;
+
+            const extoInput = document.createElement('input');
+            extoInput.setAttribute('type', 'date');
+            extoInput.setAttribute('id', `exto${experienceCount}`);
+            extoInput.setAttribute('name', 'exto[]');
+
+            const exdescLabel = document.createElement('label');
+            exdescLabel.setAttribute('for', `exdesc${experienceCount}`);
+            exdescLabel.textContent = `Description:`;
+
+            const exdescInput = document.createElement('input');
+            exdescInput.setAttribute('type', 'text');
+            exdescInput.setAttribute('id', `exdesc${experienceCount}`);
+            exdescInput.setAttribute('name', 'exdesc[]');
+
+
+            newSet.appendChild(experienceLabel);
+            newSet.appendChild(experienceInput);
+            newSet.appendChild(exfromLabel);
+            newSet.appendChild(exfromInput);
+            newSet.appendChild(extoLabel);
+            newSet.appendChild(extoInput);
+            newSet.appendChild(exdescLabel);
+            newSet.appendChild(exdescInput);
+            newSet.appendChild(document.createElement('br'));
+            newSet.appendChild(document.createElement('br'));
+
+            experienceContainer.appendChild(newSet);
+        });
+
+        const educationContainer = document.getElementById('educationContainer');
+        const addEducationButton = document.getElementById('addEducationButton');
+        let educationCount = 1;
+
+        addEducationButton.addEventListener('click', function () {
+            educationCount++;
+            const newSet = document.createElement('div');
+            newSet.classList.add('inputSet');
+
+            // Create the new "Experience" label and input
+            const educationLabel = document.createElement('label');
+            educationLabel.setAttribute('for', `education${educationCount}`);
+            educationLabel.textContent = `Education ${educationCount}:`;
+
+            const educationInput = document.createElement('input');
+            educationInput.setAttribute('type', 'text');
+            educationInput.setAttribute('id', `education${educationCount}`);
+            educationInput.setAttribute('name', 'education[]');
+
+            // Create the new "edFrom" label and input
+            const edfromLabel = document.createElement('label');
+            edfromLabel.setAttribute('for', `edfrom${educationCount}`);
+            edfromLabel.textContent = `From:`;
+
+            const edfromInput = document.createElement('input');
+            edfromInput.setAttribute('type', 'date');
+            edfromInput.setAttribute('id', `edfrom${educationCount}`);
+            edfromInput.setAttribute('name', 'edfrom[]');
+
+            // Create the new "edTo" label and input
+            const edtoLabel = document.createElement('label');
+            edtoLabel.setAttribute('for', `edto${educationCount}`);
+            edtoLabel.textContent = `To:`;
+
+            const edtoInput = document.createElement('input');
+            edtoInput.setAttribute('type', 'date');
+            edtoInput.setAttribute('id', `edto${educationCount}`);
+            edtoInput.setAttribute('name', 'edto[]');
+
+            const eddescLabel = document.createElement('label');
+            eddescLabel.setAttribute('for', `eddesc${educationCount}`);
+            eddescLabel.textContent = `Description:`;
+
+            const eddescInput = document.createElement('input');
+            eddescInput.setAttribute('type', 'text');
+            eddescInput.setAttribute('id', `eddesc${educationCount}`);
+            eddescInput.setAttribute('name', 'eddesc[]');
+
+            newSet.appendChild(educationLabel);
+            newSet.appendChild(educationInput);
+            newSet.appendChild(edfromLabel);
+            newSet.appendChild(edfromInput);
+            newSet.appendChild(edtoLabel);
+            newSet.appendChild(edtoInput);
+            newSet.appendChild(eddescLabel);
+            newSet.appendChild(eddescInput);
+            newSet.appendChild(document.createElement('br'));
+            newSet.appendChild(document.createElement('br'));
+
+            educationContainer.appendChild(newSet);
+        });
+
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+
+</html>
