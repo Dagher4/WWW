@@ -39,13 +39,12 @@
       const lang = urlParams.get('lang');
       const exp = urlParams.get('exp');
       const ed = urlParams.get('ed');
-      const imgSrc = urlParams.get('image');
-      return { fname, lname, position, address, email, phone, skills, lang, exp, ed, imgSrc };
+      return { fname, lname, position, address, email, phone, skills, lang, exp, ed};
     }
 
 
     window.onload = function () {
-      const { fname, lname, position, address, email, phone, skills, lang, exp, ed, imgSrc } = getQueryParams();
+      const { fname, lname, position, address, email, phone, skills, lang, exp, ed} = getQueryParams();
 
 
 
@@ -111,7 +110,7 @@
       
               <div class="w3-white w3-text-grey w3-card-4">
                 <div class="w3-display-container">
-                  <img src="${imgSrc}" alt="Profile Image" style="width:100%;">
+                  <img src="https://img.freepik.com/free-photo/cement-texture_1194-6530.jpg?t=st=1731869380~exp=1731872980~hmac=999ababfafc4935bccdb7ae44a1031f7bb65df2f76f0720cd14e8ca5f044ef5a&w=740" alt="Profile Image" style="width:100%;">
                   <div class="w3-display-bottomleft w3-container w3-text-black">
                     <h2>${fname} ${lname}</h2>
                   </div>
