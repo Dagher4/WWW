@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Input type button VS Button</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href="https://dagher4.github.io/WWW/">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 0;
+            width: 250px;
+            top: 52px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        body {
+            font-size: 125%;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            height: 400px;
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        code {
+            font-size: 0.8em;
+            line-height: 1.5;
+            display: block;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        .number {
+            color: #b5cea8;
+        }
+
+        .variab {
+            color: rgb(202, 16, 137);
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        .vtype {
+            color: rgb(255, 200, 0);
+        }
+
+        .function-call {
+            color: #df2525;
+        }
+
+        .highlight {
+            background-color: #525252;
+            color: #ffffff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="Wordle">Wordle</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Events">Events </a>
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+                <a href="CSS">History of CSS </a>
+                <a href="PHP static variable">PHP static variable </a>
+                <a href="Spaceship operator">Spaceship operator </a>
+                <a href="Input type button VS Button">Input type button VS Button </a>
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Progects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Form">Your CV</a>
+                <a href="Mail">Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Topics</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Input type button VS Button#1">Introduction</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Input type button VS Button#2">input type="button"</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Input type button VS Button#3">&lt;button&gt;</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Input type button VS Button#4">Key Differences</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Input type button VS Button#5">When to use each</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Input type button VS Button#6">Conclusion</a>
+
+
+    </nav>
+
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <h1 id="1" class="center">Input type button VS Button</h1>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+
+
+                <h2 id="1" class="w3-text-teal"> Introduction</h2>
+                <p>The difference between input type="button" and &lt;button&gt; lies in their implementation, behavior,
+                    and
+                    accessibility. Both elements can be used to create clickable buttons in HTML, but there are some
+                    distinctions between them.
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+
+                <h2 id="2" class="w3-text-teal"> 1. input type="button"</h2>
+                The &lt;input type="button"&gt; element is a self-closing tag and represents a button that can be
+                clicked. It
+                is typically used to trigger an action, such as submitting a form or running JavaScript.
+                <h3 class="bold">Pros:</h3>
+                <ul>
+                    <li>
+                        <span class="bold">Simple syntax:</span> The input tag is self-closing, meaning it doesn't need
+                        an end tag.
+                    </li>
+                    <li>
+                        <span class="bold">Widely supported:</span> It's supported across all browsers and versions.
+                    </li>
+                    <li>
+                        <span class="bold">Form behavior:</span> Can be used within forms, making it simpler for
+                        form-related actions.
+
+                    </li>
+                </ul>
+                <h3 class="bold">Cons:</h3>
+                <ul>
+                    <li>
+                        <span class="bold">Limited functionality:</span> You can only set the button's value (text)
+                        using the value attribute.
+                        Customization beyond this (like adding icons, HTML content, etc.) is not as flexible.
+                    </li>
+                    <li>
+                        <span class="bold">No child elements:</span> You can't add nested elements like icons, images,
+                        or text formatting inside
+                        the input tag.
+                    </li>
+                    <li>
+                        <span class="bold">Accessibility issues:</span> It is harder to customize for accessibility
+                        (screen readers, keyboard
+                        navigation) since it doesn't have as much semantic meaning as a &lt;button&gt;.<br><br>
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-32 w3-center"></p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="3" class="w3-text-teal">2. &lt;button&gt;</h2>
+                The &lt;button&gt; element represents a clickable button that can trigger actions, just like input
+                type="button". However, it provides more flexibility and functionality.
+                <h3 class="bold">Pros:</h3>
+                <ul>
+                    <li>
+                        <span class="bold">More flexible:</span> You can include complex content inside a &lt;button>
+                        tag, such as text, images,
+                        icons, and other HTML elements.
+                    </li>
+                    <li>
+                        <span class="bold">Better accessibility:</span> Since it is a semantic HTML element, it is
+                        easier to ensure that it is
+                        accessible to screen readers and provides better control over keyboard navigation.
+                    </li>
+                    <li>
+                        <span class="bold">Customizable:</span> You can apply custom styles more easily and modify its
+                        behavior with
+                        JavaScript.
+
+                    </li>
+                </ul>
+                <h3 class="bold">Cons:</h3>
+                <ul>
+                    <li>
+                        <span class="bold">Requires closing tag:</span> It needs an opening and closing tag, so it's a
+                        bit more verbose than
+                        &lt;input>.
+                    </li>
+                    <li>
+                        <span class="bold">Form behavior:</span> Unlike input type="button", which is commonly used
+                        inside forms, &lt;button>
+                        behaves differently in forms. By default, a &lt;button> submits the form if it’s used
+                        within one, unless specified otherwise by the type="button" attribute.<br><br>
+                    </li>
+                </ul>
+            </div>
+            <div class="w3-third w3-container">
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="4" class="w3-text-teal">3. Key Differences</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>input type="button"</th>
+                            <th>&lt;button&gt;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Syntax</td>
+                            <td>Self-closing tag</td>
+                            <td>Requires opening and closing tags</td>
+                        </tr>
+                        <tr>
+                            <td>Content</td>
+                            <td>Limited to value attribute</td>
+                            <td>Can include HTML content (text, images, etc.)</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibility</td>
+                            <td>Less flexible</td>
+                            <td>More flexible</td>
+                        </tr>
+                        <tr>
+                            <td>Accessibility</td>
+                            <td>Less accessible</td>
+                            <td>More accessible</td>
+                        </tr>
+                        <tr>
+                            <td>Default Behavior</td>
+                            <td>No form submission by default</td>
+                            <td>Submits form unless type="button" is specified</td>
+                        </tr>
+                        <tr>
+                            <td>Customization</td>
+                            <td>Less customizable</td>
+                            <td>More customizable</td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+                </p>
+
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="5" class="w3-text-teal">4. When to use each:</h2>
+                <ul>
+                    <li>
+                        Use input type="button" when you need a simple button without any nested content or advanced
+                        features, especially when working within forms.
+                    </li>
+                    <li>
+                        Use &lt;button> when you need more flexibility, such as adding custom content (icons, images,
+                        text
+                        formatting), better accessibility, or complex behavior.
+                    </li>
+
+                </ul>
+                <br><br>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="6" class="w3-text-teal">Conclusion</h2>
+                <p>In summary, &lt;button> is generally the preferred option because of its flexibility and semantic
+                    advantages, while input type="button" can still be useful in simpler scenarios or where legacy
+                    code or constraints dictate its use. </p>
+
+                <h2 class="w3-text-teal">References:</h2>
+                <p>Mozilla Developer Network (MDN) Web Docs:<br>
+                    <a class="bold" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button">HTML
+                        &lt;button> element</a><br>
+                    <a class="bold" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/button">
+                        HTML &lt;input> element (button type)</a><br>
+                </p>
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+</body>
+
+</html>
