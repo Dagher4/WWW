@@ -7,6 +7,97 @@
   <title>Your CV</title>
   <link rel="stylesheet" href="style.css">
   <base href="https://dagher4.github.io/WWW/">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: linear-gradient(to bottom right, #f4f4f9, #e0e7ff);
+      margin: 0;
+    }
+
+    form {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #444;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    button:active {
+      background: #003f7f;
+    }
+
+    #addskillButton,
+    #addlangButton,
+    #addExperienceButton,
+    #addEducationButton {
+      background: #28a745;
+      margin: 10px 0;
+      width: fit-content;
+      display: inline-block;
+      padding: 10px;
+    }
+
+    #addskillButton:hover,
+    #addlangButton:hover,
+    #addExperienceButton:hover,
+    #addEducationButton:hover {
+      background: #1e7c34;
+    }
+  </style>
 
 
 </head>
@@ -39,7 +130,7 @@
       </div>
     </div>
     <div class="subnav">
-      <button class="subnavbtn">Progects <i class="fa fa-caret-down"></i></button>
+      <button class="subnavbtn">Projects <i class="fa fa-caret-down"></i></button>
       <div class="subnav-content">
         <a href="Welcome">Project 1</a>
         <a href="Project2">Project 2</a>
@@ -231,7 +322,7 @@
       }
 
       // Build the new URL with all the form data, including the image in base64
-      const newUrl = `new_page?fname=${encodeURIComponent(fname)}&lname=${encodeURIComponent(lname)}&position=${encodeURIComponent(position)}&address=${encodeURIComponent(address)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&skills=${encodeURIComponent(skill)}&lang=${encodeURIComponent(langs)}&exp=${encodeURIComponent(exp)}&ed=${encodeURIComponent(edu)}`;
+      const newUrl = `file:///C:/Users/daghe/OneDrive/Desktop/USEK/Web/new_page.html?fname=${encodeURIComponent(fname)}&lname=${encodeURIComponent(lname)}&position=${encodeURIComponent(position)}&address=${encodeURIComponent(address)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&skills=${encodeURIComponent(skill)}&lang=${encodeURIComponent(langs)}&exp=${encodeURIComponent(exp)}&ed=${encodeURIComponent(edu)}`;
 
       // Open the new page with the data
       window.open(newUrl, '_blank');
