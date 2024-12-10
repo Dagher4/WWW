@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>External DTDs: System vs. Public</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href="https://dagher4.github.io/WWW/">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 0;
+            width: 250px;
+            top: 52px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        body {
+            font-size: 125%;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .highlight {
+            background-color: #525252;
+            color: #ffffff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            height: 400px;
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        code {
+            font-size: 0.8em;
+            line-height: 1.5;
+            display: block;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        .number {
+            color: #b5cea8;
+        }
+
+        .variab {
+            color: rgb(202, 16, 137);
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        .vtype {
+            color: rgb(255, 200, 0);
+        }
+
+        .function-call {
+            color: #df2525;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="http://gin446.free.nf/CarSite.php">AUTOVIBE MOTORS</a>
+        <a href="Wordle">Wordle</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Events">Events </a>
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+                <a href="CSS">History of CSS </a>
+                <a href="PHP static variable">PHP static variable </a>
+                <a href="Spaceship operator">Spaceship operator </a>
+                <a href="Input type button VS Button">Input type button VS Button </a>
+                <a href="GET vs POST">GET vs POST</a>
+                <a href="Magic Constants">Magic Constants</a>
+                <a href="System vs. Public">External DTDs: System vs. Public</a>
+
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Projects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Form">Your CV</a>
+                <a>Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Topics</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="System vs. Public#1">Introduction</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="System vs. Public#2">SYSTEM DTD</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="System vs. Public#3">PUBLIC DTD</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="System vs. Public#4">Comparison Table</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="System vs. Public#5">Conclusion</a>
+
+
+
+    </nav>
+
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <h1 id="1" class="center">External DTDs: System vs. Public</h1>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+
+
+                <h2 class="w3-text-teal"> Introduction</h2>
+                <p>An external DTD (Document Type Definition) is a separate file used to define the structure and rules
+                    for an XML document. External DTDs can be declared as either SYSTEM or PUBLIC, depending on how and
+                    where they are accessed. Here’s a small research summary on the differences between SYSTEM and
+                    PUBLIC external DTDs:</p>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="2" class="w3-text-teal"> 1. SYSTEM DTD</h2>
+                <p>A SYSTEM identifier specifies the location of the DTD file directly using a URL or a file path.</p>
+                <ul>
+                    <li>
+                        <p class="bold">Declaration Syntax:</p>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code>&lt;!DOCTYPE <span class="keyword">root-element SYSTEM </span><span class="number">"file-or-URL"</span>&gt;</code></pre>
+                        </div><br>
+                    </li>
+                    <li>
+                        <p class="bold">Characteristics:</p>
+                        <ul>
+                            <li>
+                                The identifier is a URI or file path that points to the exact location of the DTD.
+                            </li>
+                            <li>
+                                It is straightforward but tightly couples the XML document to the location of the DTD.
+                            </li>
+                            <li>
+                                Suitable for private or localized usage where the DTD is not meant to be shared broadly.
+                            </li>
+                            <li>
+                                <p class="bold">Example:</p>
+                                <div class="code-block" style="height: 60%;">
+                                    <pre><code>&lt;!DOCTYPE <span class="keyword">note SYSTEM </span><span class="number">"note.dtd"</span>&gt;</code></pre>
+                                </div>
+                                <br>Here, the XML parser will look for note.dtd in the specified path.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="bold">Advantages:</p>
+                        <ul>
+                            <li>Simple and easy to implement.</li>
+                            <li>Works well for internal projects or specific environments.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="bold">Disadvantages:</p>
+                        <ul>
+                            <li>The exact location of the DTD must be accessible; changes in the file's path or server
+                                can break validation.</li>
+                            <li>Less portable for widely shared XML files.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="3" class="w3-text-teal">2. PUBLIC DTD</h2>
+                <p>A PUBLIC identifier uses a public identifier string to refer to the DTD, often in combination with a
+                    SYSTEM identifier as a fallback.</p>
+                <ul>
+                    <li>
+                        <p class="bold">Declaration Syntax:</p>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code>&lt;!DOCTYPE <span class="keyword">root-element PUBLIC </span><span class="number">"public-identifier" "file-or-URL"</span>&gt;</code></pre>
+                        </div>
+                        <br>
+                    </li>
+                    <li>
+                        <p class="bold">Characteristics:</p>
+                        <ul>
+                            <li>
+                                The public identifier is a formal identifier (e.g., a registered name or string) that
+                                describes the DTD. </li>
+                            <li>
+                                It often includes a SYSTEM identifier as a backup, which specifies the location of the
+                                DTD. </li>
+                            <li>
+                                Suitable for standardized, widely shared DTDs where many systems can recognize the
+                                public identifier. </li>
+                            <li>
+                                <p class="bold">Example:</p>
+                                <div class="code-block" style="height: 60%;">
+                                    <pre><code>&lt;!DOCTYPE <span class="keyword">html PUBLIC </span><span class="number">"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"</span>&gt;</code></pre>
+                                </div>
+                                <br>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="bold">Advantages:</p>
+                        <ul>
+                            <li>Promotes portability and standardization.</li>
+                            <li>Useful for DTDs that are intended for widespread use, such as HTML or industry-specific
+                                standards.</li>
+                            <li>The XML parser can use local caches or resolvers for public identifiers to improve
+                                performance.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="bold">Disadvantages:</p>
+                        <ul>
+                            <li>More complex to implement and maintain.</li>
+                            <li>Requires coordination to ensure that public identifiers are standardized and resolvable.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="4" class="w3-text-teal">3. Comparison Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Aspect</th>
+                            <th>SYSTEM</th>
+                            <th>PUBLIC</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Usage Scope</td>
+                            <td>Private, localized use</td>
+                            <td>Standardized, public use</td>
+                        </tr>
+                        <tr>
+                            <td>Identifier</td>
+                            <td>Specific file path or URL</td>
+                            <td>Public identifier + optional fallback</td>
+                        </tr>
+                        <tr>
+                            <td>Portability</td>
+                            <td>Limited</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td>Complexity</td>
+                            <td>Simple</td>
+                            <td>Moderate to complex</td>
+                        </tr>
+                        <tr>
+                            <td>Examples</td>
+                            <td>note.dtd</td>
+                            <td>HTML DTDs, industry schemas</td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="6" class="w3-text-teal">4. Conclusion</h2>
+                <ul>
+                    <li>
+                        Use SYSTEM for local or project-specific XML files where the DTD location is fixed and
+                        controlled.
+                    </li>
+                    <li>
+                        Use PUBLIC for standardized or widely used DTDs to ensure better portability and flexibility,
+                        especially when sharing across systems or organizations.
+                    </li>
+                </ul>
+                <h2 class="w3-text-teal">References:</h2>
+                <a class="bold" href="https://www.w3schools.com/xml/xml_dtd.asp">W3Schools</a><br><br><br>
+
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+</body>
+
+</html>
