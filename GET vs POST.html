@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>GET vs POST</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href="https://dagher4.github.io/WWW/">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 0;
+            width: 250px;
+            top: 52px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        body {
+            font-size: 125%;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="http://gin446.free.nf/CarSite.php">AUTOVIBE MOTORS</a>
+        <a href="Wordle">Wordle</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Events">Events </a>
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+                <a href="CSS">History of CSS </a>
+                <a href="PHP static variable">PHP static variable </a>
+                <a href="Spaceship operator">Spaceship operator </a>
+                <a href="Input type button VS Button">Input type button VS Button </a>
+                <a href="GET vs POST">GET vs POST</a>
+                <a href="Magic Constants">Magic Constants</a>
+                <a href="External DTDs: System vs. Public">External DTDs: System vs. Public</a>
+
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Projects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Form">Your CV</a>
+                <a>Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Topics</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="GET vs POST#1">Introduction</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="GET vs POST#2">GET Method</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="GET vs POST#3">POST Method</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="GET vs POST#4">Key Differences</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="GET vs POST#5">Choosing Between GET and POST</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="GET vs POST#6">Conclusion</a>
+
+    </nav>
+
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <h1 id="1" class="center">GET vs POST</h1>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+
+
+                <h2 class="w3-text-teal"> Introduction</h2>
+                <p>Here's a research overview of the GET and POST HTTP methods, their differences, and appropriate use
+                    cases:</p>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+
+                <h2 id="2" class="w3-text-teal"> 1. GET Method</h2>
+                <h3 class="w3-text-teal">Purpose:</h3>
+                <ul>
+                    <li>The GET method is used to request data from a specified resource on a server.</li>
+                    <li>It is designed to retrieve data without affecting the state of the server or the resource.</li>
+                </ul>
+
+                <h3 class="w3-text-teal">Characteristics:</h3>
+                <ul>
+                    <li><span class="bold">Data in URL:</span> In a GET request, data is sent in the URL as query
+                        parameters (e.g., https://example.com/search?q=test).</li>
+                    <li><span class="bold">Idempotent: </span>Repeated GET requests should return the same result,
+                        making it safe and idempotent.</li>
+                    <li><span class="bold">Cacheable: </span>GET requests can be cached by browsers or other
+                        intermediate caches.</li>
+                    <li><span class="bold">Limited Size: </span>URLs have a length limitation (about 2000 characters),
+                        so GET requests are unsuitable for sending large data.</li>
+                </ul>
+                <h3 class="w3-text-teal">Use Cases:</h3>
+                <ul>
+                    <li>Retrieving data (e.g., displaying a web page, search results, or fetching information).</li>
+                    <li>Bookmarking URLs or sharing links.</li>
+                    <li>Use in APIs that do not modify data (i.e., "read-only" operations).</li>
+
+                </ul>
+                <h3 class="w3-text-teal">Security Considerations:</h3>
+                <ul>
+                    <li><span class="bold">Not Secure for Sensitive Data: </span>Since data is sent in the URL, it is
+                        visible in the browser history and server logs, making it inappropriate for sending sensitive
+                        information like passwords.</li>
+                    <li><span class="bold">Visibility: </span> Easily accessible by anyone who has access to the URL.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="3" class="w3-text-teal">2. POST Method</h2>
+                <h3 class="w3-text-teal">Purpose:</h3>
+                <ul>
+                    <li>The POST method is used to send data to the server to create or update resources.</li>
+                    <li>Unlike GET, it is used for actions that modify the server's state.</li>
+                </ul>
+
+                <h3 class="w3-text-teal">Characteristics:</h3>
+                <ul>
+                    <li><span class="bold">Data in Body:</span> Data is sent in the body of the request, not the URL,
+                        which allows it to send larger and more complex data, including files, form submissions, and
+                        JSON payloads.</li>
+                    <li><span class="bold">Non-Idempotent: </span>POST requests can have different results each time
+                        they are sent (e.g., creating a new record in a database).</li>
+                    <li><span class="bold">Not Cacheable: </span>POST requests are typically not cached by default.</li>
+                    <li><span class="bold">No Size Limit: </span> POST requests do not have the same size limitation as
+                        GET requests, allowing them to send large amounts of data.</li>
+                </ul>
+                <h3 class="w3-text-teal">Use Cases:</h3>
+                <ul>
+                    <li>Submitting form data (e.g., login forms, registration forms).</li>
+                    <li>Uploading files.</li>
+                    <li>Creating or updating resources in APIs (e.g., submitting data to a database).</li>
+                    <li>Sending sensitive information that should not be exposed in the URL.</li>
+                </ul>
+                <h3 class="w3-text-teal">Security Considerations:</h3>
+                <ul>
+                    <li><span class="bold">More Secure than GET: </span>Since the data is sent in the body of the
+                        request, it is not visible in the URL or browser history. However, it is still subject to
+                        security risks if not transmitted over HTTPS.</li>
+                    <li><span class="bold">Use with HTTPS: </span> For secure transmission of sensitive data, POST
+                        should be used in conjunction with HTTPS.</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="4" class="w3-text-teal">3. Key Differences</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>GET</th>
+                            <th>POST</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Purpose</td>
+                            <td>Retrieve data from a server.</td>
+                            <td>Submit data to a server (create/update).</td>
+                        </tr>
+                        <tr>
+                            <td>Data Location</td>
+                            <td>Data is in the URL (query parameters).</td>
+                            <td>Data is in the body of the request.</td>
+                        </tr>
+                        <tr>
+                            <td>Idempotency</td>
+                            <td>Idempotent (no side effects).</td>
+                            <td>Non-idempotent (can modify the server state).</td>
+                        </tr>
+                        <tr>
+                            <td>Caching</td>
+                            <td>Can be cached by browsers or proxies.</td>
+                            <td>Typically not cached.</td>
+                        </tr>
+                        <tr>
+                            <td>Security</td>
+                            <td>Data is exposed in the URL (not secure for sensitive data).</td>
+                            <td>Data is in the request body (more secure than GET, but still needs HTTPS).</td>
+                        </tr>
+                        <tr>
+                            <td>Size Limitations</td>
+                            <td>URL length restrictions (typically 2000 characters).</td>
+                            <td>No practical size limit.</td>
+                        </tr>
+                        <tr>
+                            <td>Use Cases</td>
+                            <td>Retrieving data (viewing pages, API calls to fetch data).</td>
+                            <td>Submitting forms, file uploads, modifying server data.</td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="5" class="w3-text-teal">4. Choosing Between GET and POST</h2>
+                <ul>
+                    <li>Use GET when:
+                        <ul>
+                            <li>You need to retrieve data without causing side effects.</li>
+                            <li>The data being sent is not sensitive.</li>
+                            <li>The data size is small enough to fit in the URL.</li>
+                            <li>You want the request to be cacheable or shareable via links.</li>
+                        </ul>
+                    </li>
+                    <li> Use POST when:
+                        <ul>
+                            <li>You need to send large amounts of data (e.g., files, form submissions).</li>
+                            <li>You are sending sensitive data (e.g., passwords, credit card numbers).</li>
+                            <li>You are creating or updating resources on the server.</li>
+                            <li>The request should not be cached.</li>
+                        </ul>
+                    </li>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="6" class="w3-text-teal">5. Conclusion</h2>
+                <p>In summary, GET is ideal for retrieving data and is efficient for read-only operations, while POST is
+                    suited for operations that involve sending or modifying data, including secure submissions.
+                    Understanding when and how to use each is essential for building secure and efficient web
+                    applications.</p>
+
+                <h2 class="w3-text-teal">References:</h2>
+                <a class="bold"
+                    href="https://www.webdevtutor.net/blog/http-get-vs-post-understanding-request-types-web-development">Web
+                    Dev Tutor</a><br><br><br>
+
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+</body>
+
+</html>

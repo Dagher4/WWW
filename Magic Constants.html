@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Magic Constants</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <base href="https://dagher4.github.io/WWW/">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .w3-sidebar {
+            z-index: 0;
+            width: 250px;
+            top: 52px;
+            bottom: 0;
+            height: inherit;
+        }
+
+        body {
+            font-size: 125%;
+
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .highlight {
+            background-color: #525252;
+            color: #ffffff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .code-block {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            height: 400px;
+            width: 90%;
+            margin: auto;
+            overflow-x: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        pre {
+            margin: 0;
+        }
+
+        code {
+            font-size: 0.8em;
+            line-height: 1.5;
+            display: block;
+        }
+
+        .keyword {
+            color: #569cd6;
+        }
+
+        .number {
+            color: #b5cea8;
+        }
+
+        .variab {
+            color: rgb(202, 16, 137);
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        .vtype {
+            color: rgb(255, 200, 0);
+        }
+
+        .function-call {
+            color: #df2525;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a>This overview is intended for educational purposes and does not constitute professional advice.
+                Information on
+                the history and evolution of our researchs is subject to ongoing developments and may change over time.
+                Always consult multiple sources for the most accurate and up-to-date information.</a>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="">Home</a>
+        <a href="http://gin446.free.nf/CarSite.php">AUTOVIBE MOTORS</a>
+        <a href="Wordle">Wordle</a>
+        <div class="subnav">
+            <button class="subnavbtn">Researchs <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Events">Events </a>
+                <a href="History of WWW css">History of the WWW</a>
+                <a href="Hardine css">Hardine </a>
+                <a href="CSS">History of CSS </a>
+                <a href="PHP static variable">PHP static variable </a>
+                <a href="Spaceship operator">Spaceship operator </a>
+                <a href="Input type button VS Button">Input type button VS Button </a>
+                <a href="GET vs POST">GET vs POST</a>
+                <a href="Magic Constants">Magic Constants</a>
+                <a href="External DTDs: System vs. Public">External DTDs: System vs. Public</a>
+
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Projects <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Welcome">Project 1</a>
+                <a href="Project2">Project 2</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Schedule">Schedule</a>
+                <a href="CV">CV</a>
+            </div>
+        </div>
+
+        <div class="subnav">
+            <button class="subnavbtn">Contact Us<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="Form">Your CV</a>
+                <a>Mail</a>
+            </div>
+        </div>
+        <a style="cursor:pointer;color: white;" onclick="openNav()"> Disclaimer</a>
+    </div>
+
+
+
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()"
+            class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+            <i class="fa fa-remove"></i>
+        </a>
+        <h4 class="w3-bar-item"><b>Topics</b></h4>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Magic Constants#1">Introduction</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Magic Constants#2">Common PHP Magic Constants</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Magic Constants#3">Key Usage Scenarios</a>
+        <a class="w3-bar-item w3-button w3-hover-black" href="Magic Constants#4">Contextual Behavior</a>
+       
+
+    </nav>
+
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+
+        <h1 id="1" class="center">Magic Constants</h1>
+        <div class="w3-row w3-padding-64">
+            <div class="w3-twothird w3-container">
+
+
+                <h2 class="w3-text-teal"> Introduction</h2>
+                <p>Magic constants in PHP are predefined constants that change depending on their context. They are
+                    often used in debugging, logging, or writing code that needs context-specific behavior. Below is a
+                    summary of key PHP magic constants:</p>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="2" class="w3-text-teal"> 1. Common PHP Magic Constants</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Constant</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="highlight">__LINE__</span></td>
+                            <td>The current line number in the script.</td>
+
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">__FILE__</span></td>
+                            <td>The full path and filename of the file. If used inside an included file, it gives the
+                                included file's path.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">__DIR__</span></td>
+                            <td>The directory of the file. Equivalent to dirname(__FILE__).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">__FUNCTION__</span></td>
+                            <td>The name of the current function.</td>
+
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">__CLASS__</span></td>
+                            <td>The name of the current class. Includes the namespace (if any).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">__TRAIT__</span></td>
+                            <td>The name of the current trait. Includes the namespace (if any).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">__METHOD__</span></td>
+                            <td>The name of the current class method (class name + method name).</td>
+                        </tr>
+                        <tr>
+                            <td><span class="highlight">__NAMESPACE__</span></td>
+                            <td>The name of the current namespace.</td>
+                        </tr>
+                    </tbody>
+                </table><br><br>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="3" class="w3-text-teal">2. Key Usage Scenarios</h2>
+                <ul>
+                    <li><span class="bold">Debugging</span><br>
+                        Magic constants like <span class="highlight">__LINE__</span>, <span
+                            class="highlight">__FILE__</span>, and <span class="highlight">__DIR__</span> are often used
+                        to provide detailed error
+                        messages, making it easier to pinpoint issues.<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code><span class="keyword">echo <span class="number">"Error at line "</span> . __LINE__ . <span class="number">" in file "</span> . __FILE__</span>;</code></pre>
+                        </div><br><br>
+                    </li>
+                    <li><span class="bold">Dynamic Class Methods</span><br>
+                        Use <span class="highlight">__CLASS__</span> and <span class="highlight">__METHOD__</span> for
+                        dynamic method invocation or logging:<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code><span class="keyword">class <span class="vtype"> Example</span></span>{
+    <span class="keyword">public function <span class="function-call">logAction</span></span>() {
+        <span class="keyword">echo <span class="number">"Executing"</span></span> . <span class="keyword">__METHOD__</span>;
+    }
+}</code></pre>
+                        </div><br><br>
+                    </li>
+                    <li><span class="bold">Namespacing</span><br>
+                        When working with namespaces, <span class="highlight">__NAMESPACE__</span> can confirm the
+                        current context:<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code><span class="keyword">namespace</span> <span class="function-call">App</span>\<span class="function-call">Utils</span>;
+<span class="keyword">echo</span> <span class="number">"Current namespace: "</span> . <span class="keyword">__NAMESPACE__</span>;</code></pre>
+                        </div><br><br>
+                    </li>
+                    <li><span class="bold">Traits</span><br>
+                        Traits use <span class="highlight">__TRAIT__</span> to identify their context, useful in
+                        debugging or resolving conflicts:<br><br>
+                        <div class="code-block" style="height: 60%;">
+                            <pre><code><span class="keyword">trait <span class="vtype"> ExampleTrait</span></span>{
+    <span class="keyword">public function <span class="function-call">showTrait</span></span>() {
+        <span class="keyword">echo <span class="number">"Trait used: "</span></span> . <span class="keyword">__TRAIT__</span>;
+    }
+}</code></pre>
+                        </div><br><br>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="w3-row">
+            <div class="w3-twothird w3-container">
+                <h2 id="4" class="w3-text-teal">3. Contextual Behavior</h2>
+                <ul>
+                    <li>
+                        <p class="bold">Included/Required Files:</p>If a script includes another file, <span
+                            class="highlight">__FILE__</span> and <span class="highlight">__DIR__</span> reflect the
+                        included file's location when referenced within it.
+                    </li>
+                    <li>
+                        <p class="bold">Anonymous Functions:</p>In anonymous functions, <span
+                            class="highlight">__FUNCTION__</span> will return <span class="highlight">{closure}</span>
+                        instead of a specific function name.
+                    </li>
+                </ul>
+                <h2 class="w3-text-teal">References:</h2>
+                <a class="bold" href="https://www.w3schools.com/php/php_magic_constants.asp">W3Schools</a><br><br><br>
+
+            </div>
+            <div class="w3-third w3-container">
+                <p class=" w3-padding-large w3-padding-16 w3-center"></p>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+</body>
+
+</html>
